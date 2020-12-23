@@ -1,0 +1,4 @@
+venv 
+churn_modelo.p
+churn_recent.db
+.travis.yml
