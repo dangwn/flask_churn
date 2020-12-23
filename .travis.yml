@@ -1,0 +1,7 @@
+services:
+  - docker
+
+before_install:
+  - docker build -t dangawne/flask_churn .
+  - docker container run dangawne/flask_churn
+  - docker ps
