@@ -3,5 +3,7 @@ services:
 
 before_install:
   - docker build -t dangawne/flask_churn .
-  - docker container run dangawne/flask_churn
-  - docker ps
+
+deploy:
+  - docker login --username "$DOCKERUSER" --password "$DOCKERPWD"
+  - docker image push dangawne/flask_churn
